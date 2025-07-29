@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+      body {
+        background-color: gainsboro;
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      input[type="text"] {
+        padding: 8px;
+        margin-right: 5px;
+      }
+      button {
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      .messages {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: white;
+        height: 400px;
+        overflow-y: scroll;
+      }
+      .msg {
+        border-bottom: 1px solid #eee;
+        padding: 5px;
+      }
+      .private-msg {
+        background-color: #e3f2fd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chat application</h1>
+
+    <input type="text" class="inp" placeholder="Text of message..." />
+    <input type="text" class="gr" placeholder="Group name (any)" />
+    <button class="btn">Send</button>
+    <hr />
+
+    <button class="btnJoin">Join group</button>
+    <button class="btnLeave">Leave group</button>
+    <hr />
+
+    <input type="text" class="privateId" placeholder="Receiver's ID..." />
+    <button class="btnPrivate">Send private message</button>
+
+    <div class="messages"></div>
+
+    <script
+      src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+      integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
